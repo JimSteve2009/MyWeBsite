@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Microwave sensing and metasurface research visual</title>
+  <desc id="desc">Abstract microwave field lines, resonator patterns, and metasurface tiles for an academic homepage.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f2742"/>
+      <stop offset="0.48" stop-color="#123b4d"/>
+      <stop offset="1" stop-color="#f1b36d"/>
+    </linearGradient>
+    <radialGradient id="pulse" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".82"/>
+      <stop offset=".28" stop-color="#72d2c6" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#72d2c6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <pattern id="tile" width="96" height="96" patternUnits="userSpaceOnUse">
+      <path d="M18 48h60M48 18v60" stroke="#ffffff" stroke-opacity=".18" stroke-width="2"/>
+      <circle cx="48" cy="48" r="21" fill="none" stroke="#ffffff" stroke-opacity=".18" stroke-width="3"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="980" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1600" height="980" fill="url(#tile)" opacity=".55"/>
+  <circle cx="1040" cy="430" r="410" fill="url(#pulse)"/>
+  <circle cx="1040" cy="430" r="155" fill="none" stroke="#e7f8f4" stroke-width="3" stroke-opacity=".65"/>
+  <circle cx="1040" cy="430" r="248" fill="none" stroke="#e7f8f4" stroke-width="2" stroke-opacity=".38"/>
+  <circle cx="1040" cy="430" r="335" fill="none" stroke="#e7f8f4" stroke-width="2" stroke-opacity=".22"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M96 755C258 614 356 598 514 682c135 72 267 68 396-28 130-96 252-111 365-51 83 44 153 99 235 72" stroke="#fff4d8" stroke-opacity=".54" stroke-width="8"/>
+    <path d="M70 683c188-171 344-190 515-60 107 81 234 86 382 14 169-83 324-70 512 44" stroke="#8fe0d4" stroke-opacity=".5" stroke-width="5"/>
+    <path d="M118 831c235-110 433-110 592 0 159 109 353 107 582-7" stroke="#ffffff" stroke-opacity=".22" stroke-width="4"/>
+  </g>
+  <g transform="translate(780 224)" opacity=".95">
+    <rect x="0" y="0" width="520" height="390" rx="34" fill="#092235" fill-opacity=".28" stroke="#ffffff" stroke-opacity=".28"/>
+    <g transform="translate(52 56)" fill="none" stroke="#fff" stroke-opacity=".72" stroke-width="8">
+      <path d="M0 84h72q36 0 36-36v-48"/>
+      <path d="M184 0v48q0 36 36 36h72"/>
+      <path d="M292 194h-72q-36 0-36 36v48"/>
+      <path d="M108 278v-48q0-36-36-36H0"/>
+    </g>
+    <g transform="translate(98 96)">
+      <circle cx="160" cy="100" r="70" fill="none" stroke="#f8c779" stroke-width="12"/>
+      <circle cx="160" cy="100" r="28" fill="#8fe0d4"/>
+      <path d="M160 16v168M76 100h168" stroke="#fff" stroke-width="4" stroke-opacity=".75"/>
+    </g>
+    <g fill="#ffffff" opacity=".78">
+      <circle cx="82" cy="312" r="9"/>
+      <circle cx="132" cy="312" r="9"/>
+      <circle cx="182" cy="312" r="9"/>
+      <circle cx="232" cy="312" r="9"/>
+      <circle cx="282" cy="312" r="9"/>
+      <circle cx="332" cy="312" r="9"/>
+      <circle cx="382" cy="312" r="9"/>
+      <circle cx="432" cy="312" r="9"/>
+    </g>
+  </g>
+  <g transform="translate(150 170)" opacity=".93">
+    <rect width="430" height="330" rx="30" fill="#ffffff" fill-opacity=".12" stroke="#ffffff" stroke-opacity=".28"/>
+    <path d="M64 244h302" stroke="#fff" stroke-opacity=".24" stroke-width="4"/>
+    <path d="M64 212h302" stroke="#fff" stroke-opacity=".24" stroke-width="4"/>
+    <path d="M88 247c18-96 46-144 84-144 35 0 47 55 75 55 31 0 42-91 92-91 37 0 61 42 80 116" fill="none" stroke="#f7c77b" stroke-width="10" stroke-linecap="round"/>
+    <path d="M88 247c38-43 70-65 96-65 48 0 66 44 108 44 33 0 62-31 127-31" fill="none" stroke="#8fe0d4" stroke-width="8" stroke-linecap="round"/>
+    <rect x="66" y="62" width="124" height="18" rx="9" fill="#fff" fill-opacity=".75"/>
+    <rect x="66" y="93" width="210" height="12" rx="6" fill="#fff" fill-opacity=".36"/>
+  </g>
+  <g opacity=".42" filter="url(#soft)">
+    <circle cx="1400" cy="128" r="54" fill="#fff0c8"/>
+    <circle cx="284" cy="844" r="58" fill="#9ce7db"/>
+  </g>
+</svg>

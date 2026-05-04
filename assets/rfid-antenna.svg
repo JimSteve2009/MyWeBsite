@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">RFID antenna and compact RF system</title>
+  <desc id="desc">A stylized UHF RFID antenna with field arcs and a compact circuit board.</desc>
+  <rect width="900" height="620" rx="36" fill="#f7f7fb"/>
+  <g transform="translate(170 120)">
+    <rect width="560" height="360" rx="34" fill="#ffffff" stroke="#c8cedd" stroke-width="5"/>
+    <path d="M90 270V92h116v178H90zm0-88h116M354 270V92h116v178H354zm0-88h116" fill="none" stroke="#0f5b66" stroke-width="14" stroke-linejoin="round"/>
+    <rect x="244" y="150" width="72" height="72" rx="12" fill="#f0a14a"/>
+    <path d="M206 186h38M316 186h38" stroke="#0f5b66" stroke-width="10" stroke-linecap="round"/>
+    <path d="M280 222v50" stroke="#0f5b66" stroke-width="10" stroke-linecap="round"/>
+    <g fill="#8ac8c0">
+      <circle cx="72" cy="54" r="10"/><circle cx="488" cy="54" r="10"/>
+      <circle cx="72" cy="306" r="10"/><circle cx="488" cy="306" r="10"/>
+    </g>
+  </g>
+  <g fill="none" stroke="#f0a14a" stroke-width="7" stroke-linecap="round" opacity=".68">
+    <path d="M105 196c-42 72-42 148 0 228"/>
+    <path d="M795 196c42 72 42 148 0 228"/>
+    <path d="M62 155c-76 118-76 236 0 354"/>
+    <path d="M838 155c76 118 76 236 0 354"/>
+  </g>
+</svg>

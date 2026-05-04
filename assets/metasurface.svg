@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Metasurface polarization conversion</title>
+  <desc id="desc">A stylized metasurface tile array with incoming and outgoing electromagnetic waves.</desc>
+  <rect width="900" height="620" rx="36" fill="#fff8ef"/>
+  <g transform="translate(280 88) skewY(-8)">
+    <rect width="340" height="420" rx="28" fill="#ffffff" stroke="#dfc3a0" stroke-width="5"/>
+    <g fill="none" stroke="#0f5b66" stroke-width="8">
+      <path d="M70 72h70v70H70zM200 72h70v70h-70zM70 202h70v70H70zM200 202h70v70h-70zM70 332h70v70H70zM200 332h70v70h-70z"/>
+      <path d="M104 72v70M235 72v70M104 202v70M235 202v70M104 332v70M235 332v70" stroke="#f0a14a"/>
+    </g>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M82 238c64-50 128-50 192 0" stroke="#f0a14a" stroke-width="12"/>
+    <path d="M82 310c64-50 128-50 192 0" stroke="#f0a14a" stroke-width="12" opacity=".65"/>
+    <path d="M628 214c70 44 134 44 190 0" stroke="#2b7184" stroke-width="12"/>
+    <path d="M628 294c70 44 134 44 190 0" stroke="#2b7184" stroke-width="12" opacity=".65"/>
+    <path d="M225 408l-72 72M153 408l72 72" stroke="#2b7184" stroke-width="8"/>
+    <path d="M720 408v104M668 460h104" stroke="#f0a14a" stroke-width="8"/>
+  </g>
+</svg>

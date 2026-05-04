@@ -1,0 +1,15 @@
+# Local server logs
+server.out.log
+server.err.log
+
+# Temporary source pages fetched from the old website
+page.html
+page-fixed.html
+
+# Generated publish/build folder, if you add one later
+publish/
+dist/
+
+# Operating system junk files
+Thumbs.db
+.DS_Store

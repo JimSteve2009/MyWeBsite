@@ -1,0 +1,1037 @@
+/* =========================================================
+   全站颜色变量
+   ---------------------------------------------------------
+   这里统一管理网页主要颜色。后面写 var(--ink) 就等于使用
+   #13242d。以后想整体换主题色，优先改这里。
+   ========================================================= */
+:root {
+  /* 主要文字颜色 */
+  --ink: #13242d;
+  /* 次要文字颜色，比如说明文字、作者、地址 */
+  --muted-ink: #5b6970;
+  /* 主色：导航 hover、年份块、链接等 */
+  --blue: #0f5b66;
+  /* 点缀色：下划线、强调色 */
+  --amber: #f0a14a;
+  /* 页面背景色 */
+  --paper: #fbfbf8;
+  /* 浅色分区背景 */
+  --mist: #eef7f5;
+  /* 边框线颜色 */
+  --line: #dce6e2;
+  /* 白色卡片背景 */
+  --white: #ffffff;
+}
+
+/* 所有元素都使用 border-box，方便控制宽高和 padding */
+* {
+  box-sizing: border-box;
+}
+
+/* 点击导航锚点时平滑滚动到对应板块 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================================================
+   页面基础样式
+   ---------------------------------------------------------
+   body 控制整个网页默认字体、背景、行距。
+   想整体换字体或调整默认文字行距，可以改这里。
+   ========================================================= */
+body {
+  margin: 0;
+  color: var(--ink);
+  /*
+    全站背景：
+    第一层是很浅的白色遮罩，保证文字阅读清晰；
+    第二层是 assets/circuit-bg.svg 的电子线路纹理，用来轻微体现电子信息主题。
+    如果觉得纹理太明显，可以把 rgba(251, 251, 248, 0.86) 的 0.86 改大，比如 0.92。
+    如果觉得纹理太淡，可以改小，比如 0.80。
+  */
+  background:
+    linear-gradient(rgba(251, 251, 248, 0.85), rgba(251, 251, 248, 0.85)),
+    url("assets/circuit-bg.svg") center top / 420px auto repeat,
+    linear-gradient(90deg, rgba(15, 91, 102, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(15, 91, 102, 0.035) 1px, transparent 1px),
+    var(--paper);
+  background-size: auto, 420px auto, 44px 44px, 44px 44px, auto;
+  /* 中文优先使用微软雅黑，英文使用 Segoe UI */
+  font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+  /* 全站基础行距，数值越大每行文字越疏朗 */
+  line-height: 1.55;
+}
+
+/* 链接默认继承父级颜色，不显示下划线 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 图片自适应容器宽度，避免撑破页面 */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================================================
+   顶部导航栏
+   ---------------------------------------------------------
+   .site-header 是页面顶部固定导航区域。
+   position: sticky 表示滚动时会吸附在页面顶部。
+   ========================================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  /* 导航栏整体高度，想让顶部更紧凑可以减小 min-height */
+  min-height: 64px;
+  /* 第一个值控制上下内边距，第二个 clamp 控制左右内边距 */
+  padding: 9px clamp(20px, 5vw, 72px);
+  /* 半透明背景 + 毛玻璃效果，让滚动时导航仍清晰 */
+  background: rgba(251, 251, 248, 0.92);
+  border-bottom: 1px solid rgba(220, 230, 226, 0.84);
+  backdrop-filter: blur(18px);
+}
+
+/* 左上角姓名和学院区域 */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 220px;
+}
+
+/* 左上角 YZ 方块标识 */
+.brand-mark {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  color: #ffffff;
+  background: var(--blue);
+  font-weight: 800;
+}
+
+.brand-mark {
+  /* 标识方块大小 */
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  font-size: 14px;
+}
+
+/* 顶部姓名字号 */
+.brand strong {
+  font-size: 15px;
+}
+
+/* 让姓名和学院各占一行 */
+.brand strong,
+.brand small {
+  display: block;
+}
+
+/* 顶部学院名称字号 */
+.brand small {
+  color: var(--muted-ink);
+  font-size: 11px;
+}
+
+/* 顶部导航链接容器 */
+.nav {
+  display: flex;
+  align-items: center;
+  /* 导航项之间的距离，屏幕越宽间距越大 */
+  gap: clamp(12px, 2.5vw, 28px);
+  color: var(--ink);
+  font-size: 14px;
+}
+
+/* 单个导航链接 */
+.nav a {
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+
+/* 鼠标放到导航链接上时的颜色和下划线 */
+.nav a:hover {
+  color: var(--blue);
+  border-color: var(--amber);
+}
+
+/* 自动翻译按钮组：页面只维护中文，点击按钮调用网页翻译服务 */
+.translate-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.translate-button {
+  min-height: 30px;
+  padding: 5px 10px;
+  color: var(--blue);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.translate-button:hover {
+  border-color: var(--blue);
+  background: #eef7f5;
+}
+
+/* 隐藏 Google Translate 默认控件，只使用上面的自定义按钮 */
+.translate-widget {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* =========================================================
+   通用板块样式
+   ---------------------------------------------------------
+   每个大模块都带有 class="section"。
+   这里控制各模块上下间距和左右页边距。
+   ========================================================= */
+.section {
+  /*
+    第一个 clamp 控制上下间距：
+    最小 30px，随屏幕变大到 4.5vw，最大 54px。
+    第二个 clamp 控制左右间距。
+  */
+  padding: clamp(30px, 1.2vw, 50px) clamp(20px, 5vw, 72px);
+}
+
+/* 第一个模块“个人简介”的顶部距离，可单独调 */
+.intro-section {
+  padding-top: clamp(26px, 4vw, 42px);
+}
+
+/* 浅色背景模块，比如研究方向、成果与招生 */
+.muted {
+  background: rgba(246, 250, 249, 0.92);
+}
+
+/* 模块标题区域，比如“个人简介”“研究方向”外层 */
+.section-heading {
+  /* 内容最大宽度 980px，并居中 */
+  width: min(980px, 100%);
+  /* 最后的 16px 控制标题和下面内容之间的距离 */
+  margin: 0 auto 16px;
+}
+
+/* 宽版标题区域，目前和普通标题区域相同，保留便于以后单独扩展 */
+.section-heading.wide {
+  width: min(980px, 100%);
+}
+
+/* =========================================================
+   标题字体
+   ---------------------------------------------------------
+   h2 是每个模块的大标题。
+   h3 是卡片或条目的小标题。
+   ========================================================= */
+h2 {
+  margin: 0;
+  /*
+    clamp(22px, 2.6vw, 32px) 表示：
+    最小 22px，随屏幕宽度变化，最大 32px。
+    如果想固定字号，可以改成 font-size: 24px;
+  */
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin: 0;
+  /* 研究方向标题、论文标题、项目标题的默认字号 */
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+/* 模块标题下方说明文字的样式，如果以后加说明文本会用到 */
+.section-heading p:not(.eyebrow),
+.section-lead {
+  color: var(--muted-ink);
+  font-size: 14px;
+}
+
+/* =========================================================
+   个人简介模块
+   ---------------------------------------------------------
+   左边是简介文字，右边是头像和联系资料。
+   ========================================================= */
+.intro-grid {
+  display: grid;
+  /*
+    两列布局：
+    左列占 1.35 份，右列占 0.65 份。
+    右列最小宽度 300px。
+  */
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  gap: 14px;
+  align-items: stretch;
+  width: min(980px, 100%);
+  margin: 0 auto;
+}
+
+/* 左侧个人简介正文卡片 */
+.intro-copy {
+  /* 卡片内边距，想让文字离边框更近可以调小 */
+  padding: clamp(16px, 2.4vw, 24px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: none;
+  /* 个人简介正文大小 */
+  font-size: 16px;
+}
+
+/* 去掉简介第一段上方默认空白 */
+.intro-copy p:first-child {
+  margin-top: 0;
+}
+
+/* 去掉简介最后一段下方默认空白 */
+.intro-copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* 右侧资料卡：头像、姓名、邮箱等 */
+.profile-panel {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 18px;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+/* 头像样式。替换头像图片时，只需要保持 class="profile-photo" */
+.profile-photo {
+  width: 82px;
+  height: 82px;
+  /* 图片填满 82x82 区域，超出的部分裁切 */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* 资料卡中的职称文字 */
+.profile-panel p {
+  margin: 4px 0 0;
+  color: var(--muted-ink);
+  font-size: 14px;
+}
+
+/* 资料卡里的单位、邮箱列表 */
+.quick-list {
+  display: grid;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.quick-list li {
+  color: var(--muted-ink);
+  font-size: 15px;
+}
+
+/* 个人简介下面的扩展信息：荣誉、指导学生、学术任职 */
+.profile-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 0.85fr) minmax(320px, 1.5fr);
+  gap: 12px;
+  width: min(980px, 100%);
+  margin: 14px auto 0;
+}
+
+.detail-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.detail-card h3 {
+  margin-bottom: 10px;
+}
+
+.detail-card ol {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.detail-card li {
+  position: relative;
+  padding-left: 14px;
+  margin-top: 7px;
+  color: var(--muted-ink);
+  font-size: 14px;
+}
+
+.detail-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 5px;
+  height: 5px;
+  background: var(--blue);
+  border-radius: 50%;
+}
+
+.detail-card li:first-child {
+  margin-top: 0;
+}
+
+.student-group + .student-group {
+  margin-top: 12px;
+}
+
+.student-group h4 {
+  margin: 0 0 7px;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.student-list .is-extra {
+  display: none;
+}
+
+#studentGuideList.is-expanded .student-list .is-extra {
+  display: list-item;
+}
+
+.expand-button {
+  margin-top: 12px;
+  min-height: 30px;
+  padding: 5px 12px;
+  color: var(--blue);
+  background: #eef7f5;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.expand-button:hover {
+  border-color: var(--blue);
+}
+
+/* =========================================================
+   研究方向模块
+   ---------------------------------------------------------
+   这里控制三张研究方向卡片的布局。
+   ========================================================= */
+.research-grid {
+  display: grid;
+  /* 三列等宽布局 */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  width: min(980px, 100%);
+  margin: 0 auto;
+}
+
+/* 研究方向卡片、成果展示卡片的通用外观 */
+.research-card,
+.achievement-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+/* 防止卡片内部内容溢出圆角边框 */
+.research-card {
+  overflow: hidden;
+}
+
+/* 研究方向卡片内部留白 */
+.research-card-content {
+  padding: 16px;
+}
+
+/* 研究方向说明文字 */
+.research-card-content p {
+  margin: 8px 0 0;
+  font-size: 16px;
+}
+
+/* =========================================================
+   论文模块
+   ---------------------------------------------------------
+   publication-list 是论文列表。
+   ========================================================= */
+/* 代表性成果中的小分区：代表性论文、代表性专利 */
+.output-block {
+  width: min(980px, 100%);
+  margin: 0 auto;
+}
+
+.output-block + .output-block {
+  margin-top: 18px;
+}
+
+.output-block > h3 {
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+
+/* 论文列表容器 */
+.publication-list {
+  display: grid;
+  gap: 9px;
+}
+
+/* 单篇论文条目 */
+.publication {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 10px 14px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.publication-main {
+  min-width: 0;
+}
+
+/* 论文正文，按参考文献格式显示 */
+.paper-text {
+  margin: 0;
+  color: var(--muted-ink);
+  font-size: 14px;
+}
+
+/* 论文序号 */
+.paper-index {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+/* 论文备注，例如通讯作者、SCI分区等 */
+.paper-note {
+  display: block;
+  margin: 6px 0 0;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* 论文链接按钮 */
+.paper-link {
+  display: inline;
+  margin-left: 6px;
+  color: var(--blue);
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.paper-link:hover {
+  border-color: var(--blue);
+}
+
+/* 论文右侧图片小框 */
+.paper-thumb {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f1f6f5;
+}
+
+.paper-thumb img {
+  width: 100%;
+  height: 86px;
+  object-fit: cover;
+}
+
+/* 论文显示更多/收起按钮 */
+.publication-toggle {
+  justify-self: start;
+  align-self: start;
+  min-height: 26px;
+  padding: 3px 10px;
+  color: var(--blue);
+  background: #eef7f5;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+  .publication-toggle:hover {
+  border-color: var(--blue);
+}
+
+.patent-list .publication-toggle {
+  grid-column: 1 / -1;
+  width: fit-content;
+  height: auto;
+}
+
+/* 专利列表容器 */
+.patent-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+/* 单条专利 */
+.patent-item {
+  padding: 11px 14px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.patent-title {
+  margin: 0;
+  color: var(--muted-ink);
+  font-size: 14px;
+}
+
+.patent-meta {
+  margin: 6px 0 0;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.patent-inventors {
+  margin: 5px 0 0;
+  color: var(--muted-ink);
+  font-size: 13px;
+}
+
+/* =========================================================
+   科研项目模块
+   ---------------------------------------------------------
+   split-section 让左侧标题、右侧时间线并排显示。
+   ========================================================= */
+.split-section {
+  display: grid;
+  /* 左侧标题窄一些，右侧项目列表宽一些 */
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  gap: clamp(18px, 4vw, 36px);
+  width: min(980px, 100%);
+  margin: 0 auto;
+}
+
+/* 科研项目条目容器 */
+.project-list {
+  display: grid;
+  gap: 12px;
+  width: min(980px, 100%);
+  margin: 0 auto;
+}
+
+/* 单个科研项目卡片 */
+.project-card {
+  padding: 14px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  position: relative;
+  padding-left: 14px;
+  font-size: 15px;
+}
+
+.project-card h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.64em;
+  width: 5px;
+  height: 5px;
+  background: var(--blue);
+  border-radius: 50%;
+}
+
+.project-card p {
+  margin: 4px 0 0;
+  color: var(--muted-ink);
+  font-size: 14px;
+}
+
+/* =========================================================
+   成果展示模块
+   ---------------------------------------------------------
+   achievement-grid 是成果卡片网格。
+   后续成果变成 2 张、3 张、更多张时，会自动换行排版。
+   ========================================================= */
+.achievement-grid {
+  display: grid;
+  /*
+    auto-fit + minmax 表示自动排版：
+    默认适合 4 张及以上成果：
+    - 每张卡片最小 220px
+    - 空间足够时多列显示
+    - 空间不够时自动变成单列
+  */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  width: min(980px, 100%);
+  margin: 0 auto;
+}
+
+/*
+  根据成果数量自动优化布局。
+  data-count 由 script.js 自动写入，不需要手动修改 HTML。
+*/
+.achievement-grid[data-count="1"] {
+  max-width: 340px;
+  grid-template-columns: 1fr;
+}
+
+.achievement-grid[data-count="2"] {
+  max-width: 680px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.achievement-grid[data-count="3"] {
+  max-width: 980px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* 单张成果卡片 */
+.achievement-card {
+  overflow: hidden;
+}
+
+/* 成果图片区域 */
+.achievement-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  background: #f1f6f5;
+}
+
+/* 成果文字区域 */
+.achievement-content {
+  padding: 15px;
+}
+/* 控制这一块的第一级标题大小*/
+.achievement-content h3 {
+  font-size: 15px;
+   text-align: center;
+}
+
+/* 成果描述文字 */
+.achievement-content p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--muted-ink);
+}
+
+/* 成果展示下面的招生信息与近期学术活动安排 */
+.info-panel-grid {
+  width: min(980px, 100%);
+  margin: 16px auto 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 14px;
+}
+
+.admission-panel,
+.activity-panel {
+  padding: 16px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.admission-panel h3,
+.activity-panel h3 {
+  margin-bottom: 10px;
+}
+
+.admission-panel p {
+  margin: 0;
+  color: var(--muted-ink);
+  font-size: 14px;
+}
+
+.admission-panel p + p {
+  margin-top: 10px;
+}
+
+.admission-panel strong {
+  color: var(--ink);
+}
+
+.activity-panel ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.activity-panel li {
+  position: relative;
+  padding-left: 14px;
+  margin-top: 7px;
+  color: var(--muted-ink);
+  font-size: 14px;
+}
+
+.activity-panel li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 5px;
+  height: 5px;
+  background: var(--blue);
+  border-radius: 50%;
+}
+
+.activity-panel li:first-child {
+  margin-top: 0;
+}
+
+/* =========================================================
+   教学资源页面
+   ---------------------------------------------------------
+   teaching.html 专用样式：课程卡片、下载按钮和课程通知。
+   ========================================================= */
+.teaching-intro {
+  padding-bottom: clamp(22px, 3vw, 34px);
+}
+
+.course-grid {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.course-card {
+  display: grid;
+  gap: 14px;
+  align-content: space-between;
+  min-height: 210px;
+  padding: 18px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.course-card h3 {
+  margin: 4px 0 8px;
+}
+
+.course-card p {
+  margin: 0;
+  color: var(--muted-ink);
+  font-size: 14px;
+}
+
+.course-audience {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.resource-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 5px 11px;
+  color: var(--blue);
+  background: #eef7f5;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.resource-link:hover {
+  border-color: var(--blue);
+  background: #e5f2ef;
+}
+
+.notice-panel {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  padding: 16px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.notice-panel ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.notice-panel li {
+  position: relative;
+  padding-left: 14px;
+  margin-top: 7px;
+  color: var(--muted-ink);
+  font-size: 14px;
+}
+
+.notice-panel li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 5px;
+  height: 5px;
+  background: var(--blue);
+  border-radius: 50%;
+}
+
+.notice-panel li:first-child {
+  margin-top: 0;
+}
+
+/* =========================================================
+   页脚
+   ========================================================= */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px clamp(20px, 5vw, 72px);
+  font-size: 13px;
+  color: var(--muted-ink);
+  border-top: 1px solid var(--line);
+}
+
+.visit-count {
+  color: var(--muted-ink);
+  font-size: 12px;
+}
+
+[data-admin-only][hidden] {
+  display: none;
+}
+
+/* 固定在右下角的回到顶部按钮 */
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 34px;
+  padding: 6px 10px;
+  color: var(--white);
+  background: var(--blue);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  box-shadow: 0 8px 22px rgba(19, 36, 45, 0.16);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.back-to-top:hover {
+  background: #0a4851;
+}
+
+/* =========================================================
+   平板和小屏幕适配：宽度小于 920px 时生效
+   ---------------------------------------------------------
+   多列布局变成单列，避免手机上太挤。
+   ========================================================= */
+@media (max-width: 920px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav {
+    width: 100%;
+    /* 导航项太多时允许横向滚动 */
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  /* 这些模块从多列改成单列 */
+  .intro-grid,
+  .profile-detail-grid,
+  .research-grid,
+  .split-section,
+  .achievement-grid,
+  .info-panel-grid,
+  .course-grid,
+  .patent-list {
+    grid-template-columns: 1fr;
+  }
+
+  .publication {
+    grid-template-columns: 1fr;
+  }
+
+  .paper-thumb {
+    width: min(180px, 100%);
+  }
+
+}
+
+/* =========================================================
+   手机屏幕适配：宽度小于 560px 时生效
+   ========================================================= */
+@media (max-width: 560px) {
+  .site-header {
+    min-height: auto;
+  }
+
+  /* 移动端顶部品牌不强制固定宽度 */
+  .brand {
+    min-width: 0;
+  }
+
+  /* 手机端左右边距缩小 */
+  .section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* 页脚从左右排列改成上下排列 */
+  .footer {
+    flex-direction: column;
+  }
+}

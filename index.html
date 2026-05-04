@@ -1,0 +1,262 @@
+<!doctype html>
+<!--
+  这是网页的主 HTML 文件，负责页面结构。
+  - styles.css 负责外观，比如颜色、字体、间距、布局。
+  - script.js 负责自动生成研究方向、论文、项目、专利等重复内容。
+-->
+<html lang="zh-CN">
+  <head>
+    <!-- 页面编码，保证中文正常显示 -->
+    <meta charset="utf-8">
+    <!-- 让页面在手机、平板、电脑上都按设备宽度自适应 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 浏览器标签页标题，也会影响搜索引擎显示 -->
+    <title>张允晶 | 苏州大学个人主页</title>
+
+    <!-- 页面简介，主要给搜索引擎使用，不会直接显示在网页正文中 -->
+    <meta name="description" content="张允晶，苏州大学电子信息学院副教授，研究方向包括射频/微波传感与测量、超表面电磁调控、UHF RFID天线设计、离子操纵结构设计等。">
+
+    <!-- 提前加载横幅图片。当前页面如果不用横幅，可以删除这一行 -->
+    <link rel="preload" href="assets/research-hero.svg" as="image">
+
+    <!-- 引入 CSS 样式文件。页面字体、颜色、间距主要在 styles.css 里修改 -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- =====================================================
+         顶部导航栏
+         -----------------------------------------------------
+         这里控制网页最上方的姓名、学院和导航菜单。
+         导航里的 href="#research" 会跳转到 id="research" 的模块。
+         ===================================================== -->
+    <header class="site-header">
+      <!-- 左侧品牌区域：YZ 标识、姓名、学院 -->
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark">YZ</span>
+        <span>
+          <strong>张允晶</strong>
+          <small>苏州大学 · 电子信息学院</small>
+        </span>
+      </a>
+
+      <!--
+        右侧导航菜单。
+        如果新增模块，需要同时：
+        1. 在这里加一个 <a href="#模块id">模块名称</a>
+        2. 在正文中创建对应 id 的 <section>
+      -->
+      <nav class="nav" aria-label="主导航">
+         <a href="#introduction">个人简介</a>
+        <a href="#research">研究方向</a>
+        <a href="#publications">代表性成果</a>
+        <a href="#projects">项目</a>
+        <a href="#honors">成果展示</a>
+        <a href="#admissions">招生信息</a>
+        <a href="teaching.html" target="_blank" rel="noopener">教学资源</a>
+        <div class="translate-actions notranslate" translate="no">
+          <button class="translate-button" data-translate-lang="zh-CN" type="button">中文</button>
+          <button class="translate-button" data-translate-lang="en" type="button">English</button>
+        </div>
+        <div id="google_translate_element" class="translate-widget" aria-hidden="true"></div>
+      </nav>
+    </header>
+
+    <!--
+      main 是网页主体内容。
+      id="top" 用于顶部品牌点击后回到页面开头。
+    -->
+    <main id="top">
+      <!-- =====================================================
+           个人简介模块
+           -----------------------------------------------------
+           左侧 intro-copy 是文字简介。
+           右侧 profile-panel 是头像、姓名、职称和简单信息。
+           ===================================================== -->
+      <section class="section intro-section" id="introduction">
+        <!-- 模块标题 -->
+        <div class="section-heading">
+          <p class="eyebrow">Profile</p>
+          <h2>个人简介</h2>
+        </div>
+
+        <!-- 两列布局：左侧简介，右侧资料卡 -->
+        <div class="intro-grid">
+          <!--
+            个人简介文字。
+            修改简介时，直接改下面两个 <p> 段落。
+          -->
+          <article class="intro-copy">
+            <p>张允晶，苏州大学电子信息学院副教授，硕士生导师，入选江苏省科技副总选派对象，苏州市青年科技人才托举工程资助对象。
+              本科毕业于湖南大学(2013)，博士毕业于同济大学(2019)，曾赴美国德州大学奥斯汀分校（UT-Austin）联合培养(2017-2019)。
+              近年来专注于微波传感测量、微波调控领域及电场驱动离子结构设计的研究工作，
+              围绕上述研究领域，已发表高水平学术论文40余篇，
+              其中以第一作者或通讯作者在IEEE TRANS系列等领域内权威期刊发表论文20余篇，多篇入选IEEE TAP期刊“Top Accessed”榜单。
+              近五年内在研究方向授权发明专利10余项，主持国家自然科学基金青年项目、省自然科学基金青年项目，以及博士后面上项目。</p>
+          </article>
+
+          <!--
+            右侧资料卡。
+            上传头像：
+            1. 把头像图片放入 assets 文件夹。
+            2. 修改 src="assets/yjz.png" 为你的图片路径。
+            例如 src="assets/profile.jpg"。
+          -->
+          <aside class="profile-panel" aria-label="资料卡">
+            <img class="profile-photo" src="assets/yjz.png" alt="张允晶头像">
+
+            <!-- 资料卡标题和说明文字 -->
+            <div>
+              <h3>张允晶</h3>
+              <p>副教授 · 硕士生导师</p>
+            </div>
+
+            <!-- 资料卡列表，可以改成单位、邮箱、研究方向等简短信息 -->
+            <ul class="quick-list">
+              <li>苏州大学电子信息学院</li>
+              <li><strong>yjzhang1223@suda.edu.cn</strong></li>
+              <li>微波传感与测量 · 超表面 · RFID天线设计</li>
+            </ul>
+          </aside>
+        </div>
+
+        <!--
+          个人简介扩展信息。
+          荣誉及奖励、指导学生、社会及学术任职的具体条目
+          在 script.js 中维护，并自动插入到下面三个容器中。
+        -->
+        <div class="profile-detail-grid">
+          <article class="detail-card detail-card-compact">
+            <h3>荣誉及奖励</h3>
+            <ol id="honorList"></ol>
+          </article>
+          <article class="detail-card detail-card-compact">
+            <h3>社会及学术任职</h3>
+            <ol id="serviceList"></ol>
+          </article>
+          <article class="detail-card detail-card-wide">
+            <h3>指导学生</h3>
+            <div id="studentGuideList"></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           研究方向模块
+           -----------------------------------------------------
+           标题在这里写。
+           具体的研究方向卡片不是写在 HTML 里，而是由 script.js
+           中的 researchAreas 数组自动生成到 researchGrid 容器里。
+           ===================================================== -->
+      <section class="section muted" id="research">
+        <div class="section-heading wide">
+          <p class="eyebrow">Research</p>
+          <h2>研究方向</h2>
+        </div>
+
+        <!-- script.js 会把研究方向卡片插入到这个 div 中 -->
+        <div class="research-grid" id="researchGrid"></div>
+      </section>
+
+      <!-- =====================================================
+           代表性成果模块
+           -----------------------------------------------------
+           论文数据在 script.js 的 publications 数组中修改。
+           专利数据在 script.js 的 patents 数组中修改。
+           ===================================================== -->
+      <section class="section" id="publications">
+        <div class="section-heading wide">
+          <p class="eyebrow">Selected Outputs</p>
+          <h2>代表性成果</h2>
+        </div>
+
+        <div class="output-block">
+          <h3>代表性论文</h3>
+          <!-- script.js 会把论文条目插入到这个 div 中 -->
+          <div class="publication-list" id="publicationList"></div>
+        </div>
+
+        <div class="output-block">
+          <h3>代表性专利</h3>
+          <!-- script.js 会把专利条目插入到这个 div 中 -->
+          <div class="patent-list" id="patentList"></div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+           科研项目模块
+           -----------------------------------------------------
+           项目数据在 script.js 的 projects 数组中修改。
+           projectTimeline 是自动生成项目时间线的位置。
+           ===================================================== -->
+      <section class="section" id="projects">
+        <!-- 模块标题 -->
+        <div class="section-heading wide">
+          <p class="eyebrow">Projects</p>
+          <h2>科研项目</h2>
+        </div>
+
+        <!-- script.js 会把项目条目插入到这个 div 中 -->
+        <div class="project-list" id="projectTimeline"></div>
+      </section>
+
+      <!-- =====================================================
+           成果展示模块
+           -----------------------------------------------------
+           每个成果 = 一张图片 + 一段文字说明。
+           具体成果数据在 script.js 的 achievements 数组中修改。
+           后续新增第 2 张、第 3 张成果图时，只需要在 achievements
+           数组里复制一条数据，改图片路径和文字即可。
+           ===================================================== -->
+      <section class="section muted" id="honors">
+        <div class="section-heading">
+          <p class="eyebrow">Outputs</p>
+          <h2>成果展示</h2>
+        </div>
+
+        <!-- script.js 会把成果卡片插入到这个 div 中 -->
+        <div class="achievement-grid" id="achievementGrid"></div>
+
+        <!-- 招生信息与近期学术活动安排并列展示 -->
+        <div class="info-panel-grid" id="admissions">
+          <article class="admission-panel">
+            <h3>招生信息</h3>
+            <p>所培养研究生可掌握扎实的电磁电路理论，电磁仿真建模分析能力，实验操作及数据处理能力，毕业后可从事射频系统设计、微波器件设计、IC设计等相关工作或研究。</p>
+            <p><strong>要求：</strong>基础扎实，态度认真。可招收2-3名研究生，欢迎联系报考！</p>
+            <p><strong>联系方式:</strong> yjzhang1223@suda.edu.cn</p>
+          </article>
+
+          <!-- 近期学术活动安排，具体条目在 script.js 的 academicActivities 数组中维护 -->
+          <article class="activity-panel">
+            <h3>近期学术活动安排</h3>
+            <ol id="activityList"></ol>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- =====================================================
+         页脚
+         -----------------------------------------------------
+         year 这个 span 的年份由 script.js 自动填入当前年份。
+         ===================================================== -->
+    <footer class="footer">
+      <span>© <span id="year"></span>苏州大学电子信息学院 张允晶</span>
+      <span class="visit-count" data-admin-only>
+        本站总访问量 <span id="busuanzi_value_site_pv">--</span> 次 · 本站总访客数 <span id="busuanzi_value_site_uv">--</span> 人
+      </span>
+    </footer>
+
+    <!-- 回到顶部按钮：点击后跳转到 main 的 id="top" 位置 -->
+    <a class="back-to-top" href="#top" aria-label="回到顶部">顶部</a>
+
+    <!--
+      引入 JavaScript 文件。
+      放在 body 最后可以保证 HTML 结构先加载完，再执行脚本。
+    -->
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+</html>

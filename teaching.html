@@ -1,0 +1,77 @@
+<!doctype html>
+<!--
+  教学资源页面。
+  - 本页用于放置课程课件、作业、参考资料和课程通知。
+  - 页面样式继续使用 styles.css。
+  - 课程内容和下载链接在 teaching.js 中维护。
+-->
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>教学资源 | 张允晶</title>
+    <meta name="description" content="张允晶老师课程教学资源，包括课件、作业和参考资料下载。">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="返回个人主页">
+        <span class="brand-mark">YZ</span>
+        <span>
+          <strong>张允晶</strong>
+          <small>教学资源</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="教学资源导航">
+        <a href="index.html">个人主页</a>
+        <a href="#courses">课程资源</a>
+        <a href="#notices">课程通知</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="section teaching-intro">
+        <div class="section-heading wide">
+          <p class="eyebrow">Teaching</p>
+          <h2>教学资源</h2>
+          <p>课程课件、作业文件和参考资料可在本页集中查看与下载。</p>
+        </div>
+      </section>
+
+      <section class="section muted" id="courses">
+        <div class="section-heading wide">
+          <p class="eyebrow">Courses</p>
+          <h2>课程资源</h2>
+        </div>
+
+        <div class="course-grid" id="courseGrid"></div>
+      </section>
+
+      <section class="section" id="notices">
+        <div class="section-heading wide">
+          <p class="eyebrow">Notices</p>
+          <h2>课程通知</h2>
+        </div>
+
+        <div class="notice-panel">
+          <ol id="noticeList"></ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="teachingYear"></span> 张允晶</span>
+      <span class="visit-count" data-admin-only>
+        本站总访问量 <span id="busuanzi_value_site_pv">--</span> 次 · 本站总访客数 <span id="busuanzi_value_site_uv">--</span> 人
+      </span>
+      <a href="index.html">返回个人主页</a>
+    </footer>
+
+    <!-- 回到顶部按钮：点击后跳转到 main 的 id="top" 位置 -->
+    <a class="back-to-top" href="#top" aria-label="回到顶部">顶部</a>
+
+    <script src="teaching.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
