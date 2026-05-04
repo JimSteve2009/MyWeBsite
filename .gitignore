@@ -9,6 +9,7 @@ page-fixed.html
 # Generated publish/build folder, if you add one later
 publish/
 dist/
+*.zip
 
 # Course PDFs stay on disk but are not tracked by Git
 downloads/**/*.pdf
