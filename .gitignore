@@ -10,6 +10,9 @@ page-fixed.html
 publish/
 dist/
 
+# Course PDFs stay on disk but are not tracked by Git
+downloads/**/*.pdf
+
 # Operating system junk files
 Thumbs.db
 .DS_Store
