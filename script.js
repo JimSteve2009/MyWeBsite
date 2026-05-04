@@ -187,7 +187,7 @@ const patents = [
   {
     title: "一种微波谐振腔装置及溶液浓度变化的测量方法",
     meta: "发明专利 | 专利号：ZL202210717956.8 | 已授权 | 2022",
-    inventors: "苏州大学，张允晶 / 李鹏 / 田颖",
+    inventors: "张允晶 / 李鹏 / 田颖",
     link: ""
   },
   {
@@ -199,13 +199,13 @@ const patents = [
   {
     title: "一种非接触式溶液浓度无线测量装置及方法",
     meta: "发明专利 | 专利号：ZL202110963141.3 | 已授权 | 2021",
-    inventors: "苏州大学，张允晶 / 李鹏 / 何兴理 / 窦玉江 / 李灵锋",
+    inventors: "张允晶 / 李鹏 / 何兴理 / 窦玉江 / 李灵锋",
     link: ""
   },
   {
     title: "一种纳米球光场的前向零散射调控方法",
     meta: "发明专利 | 专利号：ZL202010113105.3 | 已授权 | 2020",
-    inventors: "苏州大学，张允晶 / 李鹏 / 窦玉江 / 何兴理 / 李灵峰",
+    inventors: "张允晶 / 李鹏 / 窦玉江 / 何兴理 / 李灵锋",
     link: ""
   }
 ];
@@ -230,12 +230,12 @@ const projects = [
   },
   {
     title: "UHF频段高灵敏传感电路机理分析及其无损传感应用",
-    meta: "2020-2023，江苏省自然科学基金青年项目，已结题，优秀等第",
+    meta: "2020-2023，江苏省自然科学基金青年项目，结题优秀",
     description: "研究高灵敏传感电路机理及其在无损传感中的应用。"
   },
   {
     title: "危险气体及化学战剂检测模块研发",
-    meta: "2023-2025，企业横向，主持",
+    meta: "2023-2024，企业横向，主持",
     description: "针对危险气体对其进行快速、高灵敏检测。"
   }
 ];
@@ -351,9 +351,10 @@ const services = [
   =========================================================
 */
 const academicActivities = [
-  "22-25, Sep. 2024 将参加亚太天线与传播会议 2024APCAP。",
-  "13-18, July 2025 将参加 IEEE 天线与传播及无线电科学联盟国际学术会议 IEEE AP-S/URSI 2025，并主持 Engineered Surfaces for Absorption and Shielding 分会场。",
-  "05-09, Nov. 2025 将参加（日本千叶）PIERS2025，并主持微波传感器分会场。"
+  `22-25, Sep. 2024 将参加亚太天线与传播会议 <a class="text-link" href="http://www.em-conf.com/apcap2023/index.php" target="_blank" rel="noopener"> 2024APCAP </a>。`,
+  `13-18, July 2025 将参加 IEEE 天线与传播及无线电科学联盟国际学术会议 
+  <a class="text-link" href="https://2025.apsursi.org/" target="_blank" rel="noopener"> IEEE AP-S/URSI 2025<\a>，并主持 Engineered Surfaces for Absorption and Shielding 分会场。`,
+  `05-09, Nov. 2025 将参加（日本千叶）<a class="text-link" href="https://chiba2025.piers.org/session.html?sid=S035" target="_blank" rel="noopener"> PIERS 2025<\a>，并主持微波传感器分会场。`
 ];
 
 /*
