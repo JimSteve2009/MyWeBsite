@@ -258,25 +258,25 @@ const projects = [
 */
 const achievements = [
   {
-    image: "assets/Camou_meta.png",
+    image: "assets/Camou_meta.jpg",
     title: "基于时空调制超表面的X波段的伪装系统",
     description: "该系统通过时空调制超表面，将雷达入射波进行散射均匀化、频谱扩展以及迁移，从而有效衰减雷达入射波的频谱强度或改变频谱特征，以达到目标的隐身伪装效果。"
   },
   
   {
-    image: "assets/Microwave_sensor.png",
+    image: "assets/Microwave_sensor.jpg",
     title: "微波式液体现场无损快速检测识别系统",
     description: "基于宽带天线耦合近场对液体的强穿透性以及高灵敏度特性，本项目开发了液体无损测量系统，非接触距离可达8-10 cm，且具有检测灵敏度高、响应速度快等优点。"
   },
 
 {
-    image: "assets/Microwave_high_accuracy_sensor.png",
+    image: "assets/Microwave_high_accuracy_sensor.jpg",
     title: "多谐振高精度微波液体浓度传感器",
     description: "基于多个集成SRR结构，该传感器在宽带内实现了多谐振及小型化，该传感器结合深度学习算法，最终实现了对乙醇、甲醇、乙醚等十余种液体种类和浓度的高精度非接触测量。"
 
   },
   {
-    image: "assets/SLIM.png",
+    image: "assets/SLIM.jpg",
     title: "基于行波电场的无损离子操纵结构设计",
     description: "行波无损离子传输结构（TW-SLIM）能够实现对离子的有效操纵和控制，具有高传输效率等优点，本项目所设计的系统包括射频高压电源、行波发生电路、离子操纵结构等。"
 

@@ -11,6 +11,7 @@ publish/
 dist/
 *.zip
 html-backup-*/
+assets/*.png
 
 # Operating system junk files
 Thumbs.db
