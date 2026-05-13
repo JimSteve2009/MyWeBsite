@@ -72,70 +72,70 @@ const publications = [
     text: "Y. F. Zhou, J. L. Yong, P. Li, and Y. J. Zhang, “Machine Learning-Enabled Liquid Recognition Based on Multiple Microwave Complementary Split-Ring Resonators,” IEEE Transactions on Instrumentation and Measurement, vol. 74, pp. 1–11, 2025.",
     note: "通讯作者，SCI-2-TOP/JCR-Q1",
     image: "assets/microwave-sensor.svg",
-    link: "https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=Machine%20Learning-Enabled%20Liquid%20Recognition%20Based%20on%20Multiple%20Microwave%20Complementary%20Split-Ring%20Resonators"
+    link: "https://ieeexplore.ieee.org/document/10967013"
   },
   {
     year: "2025",
     text: "J. L. Yong, P. Li, X. L. He, M. S. Tong, L. T. Guo and Y. J. Zhang*, “Multi-Frequency Microwave Liquid Identification Sensor Based on Interdigital Split Ring Resonators,” IEEE Transactions on Instrumentation and Measurement, vol. 74, pp. 1-10, 2025, Art. no. 8001710.",
     note: "通讯作者，SCI-2-TOP/JCR-Q1",
     image: "assets/microwave-sensor.svg",
-    link: "https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=Multi-Frequency%20Microwave%20Liquid%20Identification%20Sensor%20Based%20on%20Interdigital%20Split%20Ring%20Resonators"
+    link: "https://ieeexplore.ieee.org/document/10900579"
   },
   {
     year: "2024",
     text: "H. Yang, Y. He, M. S. Tong, L. T. Guo, P. Li, and Y. J Zhang*, “A Reflection–Transmission Multifunctional Polarization Conversion Metasurface,” IEEE Transactions on Antennas and Propagation, vol. 72, no. 6, pp. 5099–5109, Jun. 2024.",
     note: "通讯作者，SCI-1-TOP，入选 Top Accessed 榜单",
     image: "assets/metasurface.svg",
-    link: "https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=A%20Reflection-Transmission%20Multifunctional%20Polarization%20Conversion%20Metasurface"
+    link: "https://ieeexplore.ieee.org/document/10535117"
   },
   {
     year: "2023",
     text: "H. Yang, S. C. Wang, P. Li, Y. He, and Y. J. Zhang*, “A broadband multifunctional reconfigurable polarization conversion metasurface,” IEEE Transactions on Antennas and Propagation, vol. 71, no. 7, pp. 5759–5767, 2023.",
     note: "通讯作者，SCI-1-TOP，入选 Top Accessed 榜单",
     image: "assets/metasurface.svg",
-    link: "https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=A%20broadband%20multifunctional%20reconfigurable%20polarization%20conversion%20metasurface"
+    link: "https://ieeexplore.ieee.org/document/10103830"
   },
   {
     year: "2023",
     text: "Y. J. Zhang, J. L. Yong, Y. Tian, and Y. He, “High sensitivity detection method for liquid concentrations based on coupled microwave resonators,” IEEE Transactions on Instrumentation and Measurement, vol. 72, pp. 1–11, 2023.",
     note: "通讯作者，SCI-2-TOP/JCR-Q1",
     image: "assets/microwave-sensor.svg",
-    link: "https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=High%20sensitivity%20detection%20method%20for%20liquid%20concentrations%20based%20on%20coupled%20microwave%20resonators"
+    link: "https://ieeexplore.ieee.org/document/10121336"
   },
   {
     year: "2024",
     text: "J. Yong, X. He, L. Li, P. Li, and Y. Zhang*, “Multi-resonant Non-intrusive Microwave Sensor for Liquid Identification with High Accuracy,” 2024 Photonics & Electromagnetics Research Symposium (PIERS), Chengdu, China: IEEE, Apr. 2024, pp. 1–6.",
     note: "通讯作者，入围学生论文奖评选",
     image: "assets/microwave-sensor.svg",
-    link: "https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=Multi-resonant%20Non-intrusive%20Microwave%20Sensor%20for%20Liquid%20Identification%20with%20High%20Accuracy"
+    link: "https://ieeexplore.ieee.org/document/10618437"
   },
   {
     year: "2023",
     text: "Y. Tian, X. L. He, L. F. Li, P. Li, and Y. J. Zhang*, “Enhanced sensitivity of wired and wireless measurement for liquid concentration based on a modified cylindrical cavity,” IEEE Sensors Journal, vol. 23, no. 17, pp. 19 457–19 465, 2023.",
     note: "通讯作者，SCI-2",
     image: "assets/microwave-sensor.svg",
-    link: "https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=Enhanced%20sensitivity%20of%20wired%20and%20wireless%20measurement%20for%20liquid%20concentration%20based%20on%20a%20modified%20cylindrical%20cavity"
+    link: "https://ieeexplore.ieee.org/document/10194554"
   },
   {
     year: "2022",
     text: "Y. J. Zhang, Y. Tian, M. S. Tong, and Y. He, “Enhanced-sensitivity noncontact measurement of liquid concentration based on passive GPT-symmetry,” IEEE Sensors Journal, vol. 22, no. 11, pp. 11 184–11193, 2022.",
     note: "第一作者，SCI-2",
     image: "assets/microwave-sensor.svg",
-    link: "https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=Enhanced-sensitivity%20noncontact%20measurement%20of%20liquid%20concentration%20based%20on%20passive%20GPT-symmetry"
+    link: "https://ieeexplore.ieee.org/document/9759426"
   },
   {
     year: "2022",
     text: "J.-Y. LU, Y.-J. ZHANG*, L.-F. LI, X.-L. HE, and P. LI*, “Advance in structures for lossless ion manipulations,” CHINESE JOURNAL OF ANALYTICAL CHEMISTRY, vol. 50, no. 12, pp. 1783–1795, 2022.",
     note: "共同通讯作者，中文核心，SCI-EI 收录",
     image: "assets/rfid-antenna.svg",
-    link: "https://www.sciencedirect.com/search?qs=Advance%20in%20structures%20for%20lossless%20ion%20manipulations"
+    link: "https://kns.cnki.net/kcms2/article/abstract?v=j0ZbOfXgIAg9xoQUMqwUGCJBOTp_bDswJSOXAhrqBfy-PG-me1uVA30Goo9XjHjn4zDgYs11Jx6oEPTsbq1ADqMcI3gCOafQqjD-6TNnC02ZizVya0Z1ZfsIlq9V5Stdm8HdgCA7dkxjf8vUvki4jjgUwoXEAodPNCNLCTy8Edw=&uniplatform=NZKPT&language=CHS"
   },
   {
     year: "2021",
     text: "Y. J. Mao, Y. J. Zhang*, Z. R. Chen, and M. S. Tong*, “A noncontact microwave sensor based on cylindrical resonator for detecting concentration of liquid solutions,” IEEE Sensors Journal, vol. 21, no. 2, pp. 1208–1214, 2021.",
     note: "共同通讯作者，SCI-2",
     image: "assets/microwave-sensor.svg",
-    link: "https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=A%20noncontact%20microwave%20sensor%20based%20on%20cylindrical%20resonator%20for%20detecting%20concentration%20of%20liquid%20solutions"
+    link: "https://ieeexplore.ieee.org/document/9166539"
   }
 ];
 
