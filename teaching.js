@@ -41,9 +41,10 @@ const teachingCourses = [
       {
         title: "课件",
         files: [
-          { label: "第01讲 传输线原理", url: "downloads/RFandMWcircuit/lectures/第一章-传输线原理.pdf" },
-          { label: "第02讲 史密斯圆图与阻抗匹配", url: "downloads/RFandMWcircuit/lectures/第一章-史密斯圆图及阻抗匹配.pdf" },
-          { label: "第03讲 滤波器设计", url: "downloads/RFandMWcircuit/lectures/第二章-滤波器设计.pdf" }
+          { label: "第01讲 传输线与阻抗匹配", url: "downloads/RFandMWcircuit/lectures/第一章-传输线与阻抗匹配.pdf" },
+          { label: "第02讲 滤波器设计", url: "downloads/RFandMWcircuit/lectures/第二章-滤波器设计.pdf" },
+          { label: "第03讲 耦合器设计", url: "downloads/RFandMWcircuit/lectures/第三章-耦合器设计.pdf" },
+          { label: "第04讲 有源电路设计", url: "downloads/RFandMWcircuit/lectures/第四章-有源电路设计.pdf" }
         ]
       },
       {
